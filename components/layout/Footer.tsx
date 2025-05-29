@@ -1,9 +1,9 @@
+
+
 export function Footer() {
   return (
-    <footer className="footer footer-center p-4 bg-base-300 text-base-content">
-      <div>
-        <p>© {new Date().getFullYear()} - Analytics Dashboard</p>
-      </div>
+    <footer className="bg-base-200 text-base-content p-4 text-center text-sm">
+      <p>© {new Date().getFullYear()} Analytics Dashboard. All rights reserved.</p>
     </footer>
   );
 }
