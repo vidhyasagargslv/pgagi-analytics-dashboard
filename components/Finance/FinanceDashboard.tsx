@@ -203,7 +203,7 @@ const FinanceDashboard: React.FC = () => {
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                     >
                         <motion.h4 
-                            className="col-span-full text-2xl font-semibold text-center mb-4 text-gray-700"
+                            className="col-span-full text-2xl font-semibold text-center mb-4 text-info"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.6, delay: 0.4 }}
@@ -254,8 +254,8 @@ const FinanceDashboard: React.FC = () => {
                                                 {stock.change}
                                             </span>
                                         </div>
-                                        <h5 className="font-bold text-lg text-gray-800">{stock.symbol}</h5>
-                                        <p className="text-sm text-gray-600 mb-2">{stock.name}</p>
+                                        <h5 className="font-bold text-lg">{stock.symbol}</h5>
+                                        <p className="text-sm  mb-2">{stock.name}</p>
                                         <p className="text-xl font-bold text-primary">{stock.price}</p>
                                     </div>
                                 </div>

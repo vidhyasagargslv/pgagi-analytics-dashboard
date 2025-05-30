@@ -46,10 +46,10 @@ const StockSearch: React.FC<StockSearchProps> = ({
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <div className="form-control">
+            <div className="form-control ">
                 <motion.div 
-                    className={`flex flex-row items-center transition-all duration-300 rounded-lg overflow-hidden ${
-                        isFocused ? 'shadow-lg shadow-blue-200' : 'shadow-md'
+                    className={`flex flex-row items-center transition-all border duration-300 rounded-lg opacity-25 overflow-hidden ${
+                        isFocused ? 'shadow-lg shadow-slate-400' : 'shadow-md'
                     }`}
                     whileFocus={{ scale: 1.02 }}
                 >
@@ -64,7 +64,7 @@ const StockSearch: React.FC<StockSearchProps> = ({
                     <motion.input
                         type="text"
                         placeholder="Search for a stock symbol (e.g., AAPL, MSFT, GOOGL)"
-                        className="input w-full focus:outline-none border-0 transition-all duration-300 text-lg bg-white"
+                        className="input w-full outline focus:outline-none border transition-all duration-300 text-lg"
                         value={searchQuery}
                         onChange={(e) => onSearchChange(e.target.value)}
                         onFocus={() => setIsFocused(true)}

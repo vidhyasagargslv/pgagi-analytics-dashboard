@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"  data-theme="light">
+    <html lang="en"  data-theme="light" className="transition-all duration-800">
       <body>
         <Providers>
         {children}

@@ -35,12 +35,12 @@ const servicesData: ServiceInfo[] = [
         id: 'weather',
         title: 'Weather Insights',
         icon: CloudIcon,
-        bgColor: 'bg-sky-500',
-        textColor: 'text-sky-100',
+        bgColor: 'bg-base-200',
+        textColor: 'text-base-content',
         description: 'Provides real-time weather updates and forecasts based on user location or search, offering a comprehensive meteorological overview.',
         apiSource: 'OpenWeatherMap API & GeoDB Cities API',
         coreLibraries: [
-            { name: 'Recharts', icon: PaintBrushIcon }, // Example icon for charting
+            { name: 'Recharts', icon: PaintBrushIcon },
         ],
         features: [
             { text: 'Geolocation-based weather', implemented: true },
@@ -55,8 +55,8 @@ const servicesData: ServiceInfo[] = [
         id: 'news',
         title: 'Global News Feed',
         icon: NewspaperIcon,
-        bgColor: 'bg-rose-500',
-        textColor: 'text-rose-100',
+        bgColor: 'bg-base-200',
+        textColor: 'text-base-content',
         description: 'Delivers the latest news headlines from around the world, categorized and filterable, with detailed article views.',
         apiSource: 'NewsAPI.org',
         coreLibraries: [
@@ -74,8 +74,8 @@ const servicesData: ServiceInfo[] = [
         id: 'finance',
         title: 'Market Watch',
         icon: BanknotesIcon,
-        bgColor: 'bg-emerald-500',
-        textColor: 'text-emerald-100',
+        bgColor: 'bg-base-200',
+        textColor: 'text-base-content',
         description: 'Tracks stock market data, offering interactive charts and key metrics for user-selected symbols and various time ranges.',
         apiSource: 'Alpha Vantage API',
         coreLibraries: [
@@ -156,7 +156,7 @@ const DashboardOverviewContent: React.FC = () => {
                             animate="visible"
                             className={`card shadow-xl ${service.bgColor} transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1`}
                         >
-                            <div className="card-body items-center text-center">
+                            <div className="card-body items-center text-center  border border-gray-500 bottom-0.5 rounded-md">
                                 <service.icon className={`h-16 w-16 mb-4 ${service.textColor}`} />
                                 <h3 className={`card-title text-2xl font-semibold ${service.textColor}`}>{service.title}</h3>
                                 <p className={`${service.textColor}/80 text-sm mb-4`}>{service.description}</p>
@@ -167,7 +167,7 @@ const DashboardOverviewContent: React.FC = () => {
                                         <h4 className={`text-sm font-semibold mb-1 ${service.textColor}/90`}>Core Libraries:</h4>
                                         <div className="flex flex-wrap justify-center gap-2">
                                         {service.coreLibraries.map(lib => (
-                                            <span key={lib.name} className={`badge badge-outline text-xs ${service.textColor}/80 border-${service.textColor}/50`}>
+                                            <span key={lib.name} className={`badge badge-outline font-serif text-xs ${service.textColor}/80 border-${service.textColor}/50`}>
                                                 {lib.icon && <lib.icon className="h-3 w-3 mr-1 inline"/>}
                                                 {lib.name}
                                             </span>
@@ -176,7 +176,7 @@ const DashboardOverviewContent: React.FC = () => {
                                     </div>
                                 )}
 
-                                <div className="text-left w-full mt-2">
+                                <div className="text-left w-full mt-2 font-mono">
                                     <h4 className={`text-md font-semibold mb-2 ${service.textColor}/90`}>Key Features:</h4>
                                     <ul className="list-none space-y-1 text-xs">
                                         {service.features.map((feature, idx) => (
