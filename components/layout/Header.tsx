@@ -1,33 +1,50 @@
-export function Header() {
+interface HeaderProps {
+  isMobileMenuOpen?: boolean;
+  setIsMobileMenuOpen?: (open: boolean) => void;
+}
+
+export function Header({ isMobileMenuOpen, setIsMobileMenuOpen }: HeaderProps) {
   return (
     <header className="navbar bg-base-100 shadow-sm">
-      <div className="flex-1">
-        <div className="md:hidden">
+      <div className="flex-1">        <div className="md:hidden">
           {/* Mobile menu button */}
-          <button className="btn btn-square btn-ghost">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block w-5 h-5 stroke-current"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
+          <button 
+            className="btn btn-square btn-ghost"
+            onClick={() => setIsMobileMenuOpen?.(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="inline-block w-5 h-5 stroke-current"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="inline-block w-5 h-5 stroke-current"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            )}
           </button>
         </div>
         <div className="flex-1 px-2 mx-2">
-          <div className="form-control w-full max-w-xs mx-auto md:mx-0">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="input input-bordered w-full"
-            />
-          </div>
+          
         </div>
       </div>
       <div className="flex flex-row justify-center items-center gap-6"> 

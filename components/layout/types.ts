@@ -1,2 +1,2 @@
 // src/components/layout/types.ts
-export type ActiveView = 'dashboard_overview' | 'weather' | 'news' | 'finance' | 'profile' | 'preferences';
+export type ActiveView = 'DashboardOverviewContent' | 'weather' | 'news' | 'finance' | 'profile' | 'preferences';
