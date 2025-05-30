@@ -1,33 +1,50 @@
-export function Header() {
+interface HeaderProps {
+  isMobileMenuOpen?: boolean;
+  setIsMobileMenuOpen?: (open: boolean) => void;
+}
+
+export function Header({ isMobileMenuOpen, setIsMobileMenuOpen }: HeaderProps) {
   return (
     <header className="navbar bg-base-100 shadow-sm">
-      <div className="flex-1">
-        <div className="md:hidden">
+      <div className="flex-1">        <div className="md:hidden">
           {/* Mobile menu button */}
-          <button className="btn btn-square btn-ghost">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block w-5 h-5 stroke-current"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
+          <button 
+            className="btn btn-square btn-ghost"
+            onClick={() => setIsMobileMenuOpen?.(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="inline-block w-5 h-5 stroke-current"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="inline-block w-5 h-5 stroke-current"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            )}
           </button>
         </div>
         <div className="flex-1 px-2 mx-2">
-          <div className="form-control w-full max-w-xs mx-auto md:mx-0">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="input input-bordered w-full"
-            />
-          </div>
+          
         </div>
       </div>
       <div className="flex flex-row justify-center items-center gap-6"> 
@@ -64,7 +81,7 @@ export function Header() {
         <div className="dropdown dropdown-end ">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
-              <img src="https://placehold.co/100x100" alt="User" />
+              <img src="/profile_comp.jpg" alt="User" />
             </div>
           </label>
           <ul
@@ -72,7 +89,7 @@ export function Header() {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <span className="font-bold text-base">John Doe</span>
+              <span className="font-bold text-base text-primary">Vidhya sagar</span>
               <a className="text-base">Profile</a>
             </li>
             <li>

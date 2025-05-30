@@ -2,3 +2,7 @@
 @plugin "daisyui"{
    themes: light, dark;
  }
+
+html {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
