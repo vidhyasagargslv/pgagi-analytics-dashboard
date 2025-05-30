@@ -90,11 +90,13 @@ const News: React.FC = () => {
   return (
     <div className="p-4 md:p-6 space-y-6">
       <div className="text-center">
-        <h2 className="text-3xl font-bold">News Headlines</h2>
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
+          News Headlines
+        </h2>
       </div>
 
       {/* Search Bar */}
-      <div className="form-control max-w-lg mx-auto">
+      <div className="form-control max-w-screen mx-auto flex justify-center items-center space-x-4 mb-6">
         <div className="join">
           <input
             type="text"
@@ -103,6 +105,8 @@ const News: React.FC = () => {
             onChange={handleSearchInputChange}
             onKeyDown={(e) => { if (e.key === 'Enter') handleExecuteSearch();}}
             className="input input-bordered join-item w-full"
+            disabled={isFetching || isLoading}
+            
           />
           <button
             className="btn btn-primary join-item"

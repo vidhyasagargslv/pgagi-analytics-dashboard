@@ -1,10 +1,8 @@
 "use client"
 import { DashboardLayout } from '@/components/layout/DashboardLayout';
-import { ActiveView } from '@/components/layout/Sidebar'; // Import ActiveView
-import Weather from '@/components/weather/Weather'; // Adjust path if needed
-import News from '@/components/News/News';         // Adjust path if needed
-// Import Finance component when ready
-// import Finance from '@/components/Finance/Finance';
+import { ActiveView } from '@/components/layout/Sidebar';
+import Weather from '@/components/weather/Weather';
+import News from '@/components/News/News';
 import React, { useState } from 'react';
 import FinanceDashboard from '@/components/Finance/FinanceDashboard';
 import DashboardOverviewContent from './DashboardOverviewContent';

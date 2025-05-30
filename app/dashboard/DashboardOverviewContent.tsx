@@ -1,33 +1,29 @@
-// src/components/Dashboard/DashboardOverviewContent.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
     CloudIcon,
     NewspaperIcon,
     BanknotesIcon,
-    CpuChipIcon,
     CodeBracketSquareIcon,
     BoltIcon,
     PuzzlePieceIcon,
     PaintBrushIcon,
     CircleStackIcon,
     RectangleStackIcon,
-    ShieldCheckIcon,
-    BeakerIcon,
     BookOpenIcon
-} from '@heroicons/react/24/outline'; // Or solid, as you prefer
+} from '@heroicons/react/24/outline';
 
 interface FeatureItem {
     text: string;
-    implemented: boolean; // To show if it's done or planned
+    implemented: boolean;
 }
 
 interface ServiceInfo {
     id: string;
     title: string;
     icon: React.ElementType;
-    bgColor: string; // Tailwind background color class
-    textColor: string; // Tailwind text color class
+    bgColor: string;
+    textColor: string;
     description: string;
     apiSource: string;
     coreLibraries: { name: string; icon?: React.ElementType }[];
@@ -106,8 +102,6 @@ const techStackData = [
     { name: 'DaisyUI', category: 'Styling', icon: PaintBrushIcon, description: "Tailwind CSS component library for beautiful, customizable UI elements." },
     { name: 'Framer Motion', category: 'Animation', icon: BoltIcon, description: "Production-ready motion library for React." },
     { name: 'Heroicons', category: 'Assets', icon: PuzzlePieceIcon, description: "Beautiful, hand-crafted SVG icons." },
-    // Add testing libraries if you list them
-    // { name: 'Jest & React Testing Library', category: 'Testing', icon: BeakerIcon },
 ];
 
 const DashboardOverviewContent: React.FC = () => {
@@ -139,10 +133,10 @@ const DashboardOverviewContent: React.FC = () => {
                 className="text-center p-8 rounded-xl shadow-2xl bg-gradient-to-br from-primary to-secondary"
             >
                 <BookOpenIcon className="h-20 w-20 mx-auto mb-6 text-primary-content" />
-                <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-primary-content">
+                <h1 className="text-5xl font-extrabold mb-4 text-primary-content max-md:text-2xl">
                     Comprehensive Analytics Dashboard
                 </h1>
-                <p className="text-lg md:text-xl text-primary-content/90 max-w-3xl mx-auto">
+                <p className="text-lg md:text-xl text-primary-content/90 max-w-3xl mx-auto max-md:text-sm">
                     An advanced front-end application showcasing data from multiple APIs,
                     interactive animations, and a high-performance user experience.
                     Built as part of the SDE1 Intern assignment for PGAGI.
@@ -225,7 +219,6 @@ const DashboardOverviewContent: React.FC = () => {
                 </div>
             </motion.section>
 
-             {/* Assignment Guidelines & Future Work (Optional) */}
             <motion.section variants={sectionVariants} initial="hidden" animate="visible" className="mt-12 text-center">
                 <h2 className="text-2xl font-semibold mb-6 text-accent">Project Context</h2>
                 <div className="prose prose-sm md:prose-base lg:prose-lg max-w-4xl mx-auto text-base-content/90 bg-base-100 p-6 rounded-lg shadow-md">

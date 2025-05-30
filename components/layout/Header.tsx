@@ -81,7 +81,7 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen }: HeaderProps) {
         <div className="dropdown dropdown-end ">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
-              <img src="https://placehold.co/100x100" alt="User" />
+              <img src="/profile_comp.jpg" alt="User" />
             </div>
           </label>
           <ul
@@ -89,7 +89,7 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen }: HeaderProps) {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <span className="font-bold text-base">John Doe</span>
+              <span className="font-bold text-base text-primary">Vidhya sagar</span>
               <a className="text-base">Profile</a>
             </li>
             <li>
