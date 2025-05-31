@@ -1,5 +1,4 @@
-// src/store/store.ts
-// ... other imports
+
 import { configureStore } from '@reduxjs/toolkit';
 import { alphaVantageApi } from './services/alphaVantageApi';
 import { geoDbApi } from './services/geoDbApi';
@@ -14,14 +13,14 @@ export const store = configureStore({
         [geoDbApi.reducerPath]: geoDbApi.reducer,
         [weatherApi.reducerPath]: weatherApi.reducer,
         [newsApi.reducerPath]: newsApi.reducer,
-        [alphaVantageApi.reducerPath]: alphaVantageApi.reducer, // Add this
+        [alphaVantageApi.reducerPath]: alphaVantageApi.reducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware()
             .concat(geoDbApi.middleware)
             .concat(weatherApi.middleware)
             .concat(newsApi.middleware)
-            .concat(alphaVantageApi.middleware), // Add this
+            .concat(alphaVantageApi.middleware),
 });
 setupListeners(store.dispatch);
 export type RootState = ReturnType<typeof store.getState>;

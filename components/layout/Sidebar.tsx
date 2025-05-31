@@ -1,4 +1,3 @@
-// src/components/layout/Sidebar.tsx
 'use client';
 
 // Define ActiveView type here or import from a types file

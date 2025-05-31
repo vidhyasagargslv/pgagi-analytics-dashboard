@@ -6,7 +6,6 @@ import NewsDetailModal from './NewsDetailModal';
 import LoadingSpinner from '../ui/LoadingSpinner';
 import ErrorMessage from '../ui/ErrorMessage';
 import { Article } from '../../store/services/newsApi';
-// No need for useDebounce here if search is triggered by button
 
 const NEWS_PAGE_SIZE = 20;
 

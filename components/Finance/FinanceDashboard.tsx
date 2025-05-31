@@ -33,7 +33,6 @@ const FinanceDashboard: React.FC = () => {
         searchQuery: currentSearchQuery,
     } = useSelector((state: RootState) => state.finance);
 
-    // RTK Query Hooks
     const [triggerSearch, { data: searchResults, isLoading: isSearching, isFetching: isFetchingSearch }] = useLazySearchSymbolQuery();
     const [triggerGlobalQuote, { data: globalQuote, isLoading: isLoadingQuote, error: quoteError }] = useLazyGetGlobalQuoteQuery();
     const [triggerTimeSeries, { data: timeSeriesData, isLoading: isLoadingTimeSeries, error: timeSeriesError }] = useLazyGetTimeSeriesQuery();
@@ -80,7 +79,7 @@ const FinanceDashboard: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="p-4 md:p-6 space-y-6 bg-base-200 rounded-lg shadow-xl" // Using DaisyUI/Tailwind
+            className="p-4 md:p-6 space-y-6 bg-base-200 rounded-lg shadow-xl"
         >
             <motion.div
                 initial={{ opacity: 0, y: -20 }}

@@ -1,4 +1,3 @@
-// src/components/Finance/StockChart.tsx
 import React, { useEffect, useRef } from 'react';
 import {
     createChart,
@@ -22,7 +21,6 @@ interface StockChartProps {
     symbol: string;
 }
 
-// Helper to convert your ChartDataPoint to Lightweight Charts format
 const formatDataForLightweightCharts = (
     data: ChartDataPoint[],
     type: ChartType

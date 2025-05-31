@@ -81,7 +81,7 @@ const Weather: React.FC = () => {
   };
 
   const processForecastData = (forecastData: FiveDayForecastResponse | undefined): ProcessedDailyForecast[] => {
-    // ... (same as before)
+
     if (!forecastData || !forecastData.list) return [];
 
     const dailyData: { [key: string]: { temps: number[], humidities: number[], winds: number[], weather: ForecastListItem[], icons: string[], descriptions: string[] } } = {};

@@ -200,7 +200,7 @@ const DashboardOverviewContent: React.FC = () => {
                     {techStackData.map((tech, index) => (
                         <motion.div
                             key={tech.name}
-                            custom={index + servicesData.length} // Continue stagger effect
+                            custom={index + servicesData.length} 
                             variants={cardVariants}
                             initial="hidden"
                             animate="visible"

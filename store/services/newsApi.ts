@@ -1,4 +1,3 @@
-// src/store/services/newsApi.ts
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 interface ArticleSource {
@@ -27,8 +26,8 @@ interface GetNewsArticlesParams {
     query: string;
     page?: number;
     pageSize?: number;
-    category?: string; // As per original assignment, good to have
-    // Add other NewsAPI params as needed: sources, domains, from, to, language, sortBy
+    category?: string;
+    
 }
 
 export const newsApi = createApi({
@@ -38,9 +37,7 @@ export const newsApi = createApi({
         prepareHeaders: (headers) => {
             const apiKey = process.env.NEXT_PUBLIC_NEWS_API_KEY;
             if (apiKey) {
-                // NewsAPI.org uses Authorization header or apiKey query param
-                // headers.set('Authorization', `Bearer ${apiKey}`);
-                // Or it's often passed as a query parameter
+                
             }
             return headers;
         },
@@ -57,17 +54,15 @@ export const newsApi = createApi({
                 if (category) { // For top-headlines, if we switch endpoint
                     params.category = category;
                 }
-                // Use 'everything' endpoint for general search with 'q'
-                // Or 'top-headlines' if focusing on categories/country
+                
                 return {
                     url: 'everything', // or 'top-headlines' if using categories
                     params,
                 };
             },
-            // For pagination/infinite scroll, we might need to merge results
-            // See RTK Query docs on 'merge' and 'serializeQueryArgs' for infinite scroll
+            
             serializeQueryArgs: ({ endpointName, queryArgs }) => {
-                // Create a stable query key, excluding 'page' for merging
+                
                 const { page, ...stableQueryArgs } = queryArgs;
                 return `${endpointName}-${JSON.stringify(stableQueryArgs)}`;
             },
@@ -76,7 +71,7 @@ export const newsApi = createApi({
                     currentCache.articles.push(...newItems.articles);
                     currentCache.totalResults = newItems.totalResults; // Update total results
                 } else {
-                    // This is a new query or the first page
+                    
                     return newItems;
                 }
             },

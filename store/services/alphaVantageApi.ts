@@ -1,4 +1,3 @@
-// src/store/services/alphaVantageApi.ts
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 // --- Interfaces ---
@@ -25,7 +24,6 @@ interface TimeSeriesPointRaw {
     '3. low': string;
     '4. close': string;
     '5. volume': string;
-    // Weekly/Monthly might have '6. adjusted close', '7. dividend amount' etc.
 }
 
 // Generic structure for Time Series API responses
@@ -37,7 +35,7 @@ interface TimeSeriesApiResponse {
         '4. Output Size'?: string;
         '5. Time Zone': string;
     };
-    [key: string]: any; // This will hold the actual time series object e.g., "Time Series (Daily)"
+    [key: string]: any; 
 }
 
 export interface GlobalQuoteData {
@@ -82,7 +80,7 @@ export const alphaVantageApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: 'https://www.alphavantage.co/',
         prepareHeaders: (headers) => {
-            // Alpha Vantage API key is usually passed as a query parameter
+            
             return headers;
         },
     }),
@@ -115,7 +113,7 @@ export const alphaVantageApi = createApi({
                 params: {
                     function: timeSeriesFunction,
                     symbol,
-                    outputsize: 'compact', // 'compact' for last 100, 'full' for more
+                    outputsize: 'compact',
                     apikey: process.env.NEXT_PUBLIC_ALPHA_VANTAGE_API_KEY || 'demo',
                 },
             }),
@@ -132,10 +130,10 @@ export const alphaVantageApi = createApi({
                         high: parseFloat(values['2. high']),
                         low: parseFloat(values['3. low']),
                         close: parseFloat(values['4. close']),
-                        value: parseFloat(values['4. close']), // For line chart
+                        value: parseFloat(values['4. close']),
                         volume: parseInt(values['5. volume'], 10),
                     }))
-                    .sort((a, b) => new Date(a.time).getTime() - new Date(b.time).getTime()); // Ensure chronological order
+                    .sort((a, b) => new Date(a.time).getTime() - new Date(b.time).getTime());
             },
         }),
     }),

@@ -1,6 +1,5 @@
-// src/components/News/NewsCard.tsx
 import React from 'react';
-import { Article } from '../../store/services/newsApi'; // Adjust path
+import { Article } from '../../store/services/newsApi'; 
 
 interface NewsCardProps {
   article: Article;
