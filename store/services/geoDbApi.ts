@@ -1,12 +1,11 @@
-// src/store/services/geoDbApi.ts
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 interface GeoDbCity {
     id: number;
     wikiDataId: string;
     type: string;
-    city: string; // Or 'name' - the example has both, let's clarify which one to use for display
-    name: string; // Using this for display, and 'city' for passing to weather API if different
+    city: string; 
+    name: string;
     country: string;
     countryCode: string;
     region: string;
@@ -33,7 +32,7 @@ export const geoDbApi = createApi({
             const apiKey = process.env.NEXT_PUBLIC_RAPIDAPI_KEY;
             if (apiKey) {
                 headers.set('x-rapidapi-key', apiKey);
-                // As per the example, but the host might be specific to the key
+                
                 // headers.set('x-rapidapi-host', 'wft-geo-db.p.rapidapi.com');
             }
             return headers;

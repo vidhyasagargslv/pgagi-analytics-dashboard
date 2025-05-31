@@ -1,10 +1,9 @@
-// src/components/Weather/ForecastChart.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
 } from 'recharts';
-import { ProcessedDailyForecast } from './types'; // Adjust path if types.ts is elsewhere
+import { ProcessedDailyForecast } from './types';
 
 interface ForecastChartProps {
   data: ProcessedDailyForecast[];

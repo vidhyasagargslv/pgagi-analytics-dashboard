@@ -33,7 +33,6 @@ const FinanceDashboard: React.FC = () => {
         searchQuery: currentSearchQuery,
     } = useSelector((state: RootState) => state.finance);
 
-    // RTK Query Hooks
     const [triggerSearch, { data: searchResults, isLoading: isSearching, isFetching: isFetchingSearch }] = useLazySearchSymbolQuery();
     const [triggerGlobalQuote, { data: globalQuote, isLoading: isLoadingQuote, error: quoteError }] = useLazyGetGlobalQuoteQuery();
     const [triggerTimeSeries, { data: timeSeriesData, isLoading: isLoadingTimeSeries, error: timeSeriesError }] = useLazyGetTimeSeriesQuery();
@@ -80,7 +79,7 @@ const FinanceDashboard: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="p-4 md:p-6 space-y-6 bg-base-200 rounded-lg shadow-xl" // Using DaisyUI/Tailwind
+            className="p-4 md:p-6 space-y-6 bg-base-200 rounded-lg shadow-xl"
         >
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
@@ -119,7 +118,7 @@ const FinanceDashboard: React.FC = () => {
                         <h3 className="text-2xl font-semibold text-accent">
                             {selectedSymbolInfo['2. name']} ({selectedSymbolInfo['1. symbol']})
                         </h3>
-                         {/* Potentially add company logo here if you integrate another API for that */}
+                        
                     </div>
 
                     <KeyMetricsDisplay quote={globalQuote} isLoading={isLoadingQuote} error={quoteError} />
@@ -240,7 +239,7 @@ const FinanceDashboard: React.FC = () => {
                             >
                                 <div className="card-body p-4 relative overflow-hidden">
                                     <motion.div
-                                        className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                        className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-50 transition-opacity duration-300"
                                         initial={false}
                                     />
                                     <div className="relative z-10">

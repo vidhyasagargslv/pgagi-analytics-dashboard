@@ -1,4 +1,3 @@
-// src/components/common/ErrorMessage.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 

@@ -1,4 +1,3 @@
-// src/components/Finance/ChartControls.tsx
 import React from 'react';
 import { TimeSeriesFunction } from '@/store/services/alphaVantageApi';
 import { ChartType } from '@/store/slices/financeSlice';
@@ -18,7 +17,7 @@ const timeSeriesOptions: { label: string; value: TimeSeriesFunction }[] = [
 ];
 
 const chartTypeOptions: { label: string; value: ChartType; icon: React.ElementType }[] = [
-    { label: 'Line', value: 'line', icon: ChartPieIcon }, // Example icon
+    { label: 'Line', value: 'line', icon: ChartPieIcon }, 
     { label: 'Candlestick', value: 'candlestick', icon: ChartBarIcon },
 ];
 

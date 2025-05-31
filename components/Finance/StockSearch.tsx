@@ -1,4 +1,3 @@
-// src/components/Finance/StockSearch.tsx
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -106,7 +105,7 @@ const StockSearch: React.FC<StockSearchProps> = ({
                             >
                                 <div className="flex items-center justify-center space-x-2">
                                     <span className="loading loading-dots loading-md text-blue-500"></span>
-                                    <span className="text-gray-600">Searching stocks...</span>
+                                    <span className="">Searching stocks...</span>
                                 </div>
                             </motion.li>
                         )}
@@ -141,7 +140,7 @@ const StockSearch: React.FC<StockSearchProps> = ({
                                 >
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <div className="font-semibold text-gray-800 group-hover:text-blue-700 transition-colors">
+                                            <div className="font-semibold  group-hover:text-blue-700 transition-colors">
                                                 {symbol['2. name']} 
                                                 <span className="ml-2 px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">
                                                     {symbol['1. symbol']}

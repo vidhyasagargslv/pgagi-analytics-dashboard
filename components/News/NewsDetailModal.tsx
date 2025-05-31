@@ -1,4 +1,3 @@
-// src/components/News/NewsDetailModal.tsx
 import React from 'react';
 import { Article } from '../../store/services/newsApi'; // Adjust path
 
@@ -9,8 +8,6 @@ interface NewsDetailModalProps {
 
 const NewsDetailModal: React.FC<NewsDetailModalProps> = ({ article, onClose }) => {
   if (!article) return null;
-
-  const placeholderImage = "https://via.placeholder.com/600x300.png?text=No+Image";
 
   return (
     <dialog id="news_detail_modal" className="modal modal-open">

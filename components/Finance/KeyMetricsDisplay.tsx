@@ -1,4 +1,3 @@
-// src/components/Finance/KeyMetricsDisplay.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -14,7 +13,7 @@ import { GlobalQuoteData } from '@/store/services/alphaVantageApi';
 interface KeyMetricsDisplayProps {
     quote: GlobalQuoteData | undefined;
     isLoading: boolean;
-    error: any; // Consider a more specific error type
+    error: any;
 }
 
 const MetricCard: React.FC<{ title: string; value: string | number; icon: React.ElementType; change?: number; unit?: string;isLoading?: boolean }> = ({
