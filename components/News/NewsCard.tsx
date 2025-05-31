@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Article } from '../../store/services/newsApi'; 
 
 interface NewsCardProps {
@@ -12,7 +13,12 @@ const NewsCard: React.FC<NewsCardProps> = ({ article, onViewDetails }) => {
 
 
   return (
-    <div className="card card-compact w-full bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+    <motion.div
+      whileHover={{ scale: 1.04, boxShadow: '0 8px 32px 0 rgba(80,80,200,0.15)' }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      className="card card-compact w-full bg-base-100 shadow-xl hover:shadow-2xl transition-shadow ease-in-out duration-300"
+    >
       <figure className="h-48 overflow-hidden">
         <img
             src={urlToImage || placeholderImage}
@@ -37,7 +43,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article, onViewDetails }) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
