@@ -13,10 +13,6 @@ It demonstrates best practices in modern front-end development, including state 
 
 ## Screenshots / GIFs
 
-**(It's highly recommended to add a few screenshots or GIFs here to showcase your application. Create a `screenshots` folder in your project root to store them.)**
-
-*Example:*
-```
 ![Dashboard Overview](screenshots/Overview1.png)
 ![Dashboard Overview](screenshots/Overview2.png)
 ![Weather Section](screenshots/Weather1.png)
@@ -27,7 +23,6 @@ It demonstrates best practices in modern front-end development, including state 
 ![Finance Chart](screenshots/Stocks2.png)
 ![Finance Chart](screenshots/Stocks3.png)
 
-```
 
 ---
 
