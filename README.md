@@ -175,7 +175,7 @@ This project requires API keys from multiple services. Follow the links below to
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/pgagi-analytics-dashboard.git
+git clone https://github.com/vidhyasagargslv/pgagi-analytics-dashboard.git
 cd pgagi-analytics-dashboard
 ```
 
