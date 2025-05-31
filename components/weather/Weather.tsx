@@ -414,7 +414,7 @@ const Weather: React.FC = () => {
                   />
                   <div className="relative z-10">
                     <motion.h4 
-                      className="font-semibold text-lg"
+                      className="font-semibold text-lg text-info mb-1"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}

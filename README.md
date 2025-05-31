@@ -17,9 +17,16 @@ It demonstrates best practices in modern front-end development, including state 
 
 *Example:*
 ```
-![Dashboard Overview](screenshots/dashboard-overview.png)
-![Weather Section](screenshots/weather-section.gif)
-![Finance Chart](screenshots/finance-chart.png)
+![Dashboard Overview](screenshots/Overview1.png)
+![Dashboard Overview](screenshots/Overview2.png)
+![Weather Section](screenshots/Weather1.png)
+![Weather Section](screenshots/Weather2.png)
+![News Section](screenshots/News1.png)
+![News Section](screenshots/News2.png)
+![Finance Chart](screenshots/Stocks1.png)
+![Finance Chart](screenshots/Stocks2.png)
+![Finance Chart](screenshots/Stocks3.png)
+
 ```
 
 ---
